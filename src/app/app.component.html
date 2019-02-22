@@ -1,6 +1,12 @@
 <!-- <div class="flags">
   <app-internationalization></app-internationalization>
 </div> -->
+<ng-template ngFor let-lang [ngForOf]="languages">
+  <span *ngIf="lang.code !== localeId">
+    <button (click)="chooseLang(lang.code)">{{lang.label}}</button>
+  </span>
+  <span *ngIf="lang.code === localeId">{{lang.label}} </span>
+</ng-template>
 <div class="resume">
   <app-presentation></app-presentation>
   <app-skill></app-skill>

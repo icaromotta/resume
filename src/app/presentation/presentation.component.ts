@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./presentation.component.scss']
 })
 export class PresentationComponent implements OnInit {
+
   public avatar = '/assets/me.png';
   public imgCafe =
     "https://uploads.codesandbox.io/uploads/user/c6f9e663-ed30-4be5-9a29-cc609a2d653a/Fw1D-icons8-caf%C3%A9-64.png";
