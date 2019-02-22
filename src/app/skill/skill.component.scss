@@ -1,0 +1,45 @@
+.skill {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    border-top: 2px #000 solid;
+  
+    .skill__list--icon ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+  
+      li {
+        width: 20%;
+      }
+      svg {
+        width: 40%;
+      }
+    }
+  
+    .skill__list {
+      display: flex;
+      flex-direction: row;
+  
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    .skill {
+      padding: 10%;
+  
+      .skill__list--icon svg {
+        width: 50%;
+      }
+    }
+  }
+  /* Small devices (landscape phones, 576px and up) */
+  @media (max-width: 576px) {
+  }
+  

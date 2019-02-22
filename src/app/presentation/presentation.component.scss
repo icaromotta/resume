@@ -1,0 +1,113 @@
+.presentation {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    border-top: 2px #000 solid;
+    border-right: 1px #f5f1f9 solid;
+  
+    .presentation__data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .presentation__avatar {
+      border-radius: 50%;
+      width: 75%;
+    }
+  
+    .presentation__name {
+      font-size: 3vw;
+      text-align: center;
+      margin: 0;
+    }
+  
+    .presentation__position {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .presentation__aboutme {
+      text-align: justify;
+    }
+  
+    .presentation__list--icon ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      justify-content: space-between;
+      padding: 0% 12.5% 0% 0%;
+  
+      li {
+        width: 30%;
+      }
+  
+      img {
+        width: 85%;
+      }
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    .presentation {
+      flex-direction: row;
+  
+      .presentation__avatar {
+        width: 65%;
+      }
+  
+      .presentation__name {
+        margin: 2%;
+      }
+  
+      .presentation__position {
+        text-align: center;
+      }
+  
+      .presentation__aboutme {
+        padding: 0% 4%;
+        width: 75%;
+      }
+  
+      .presentation__list--icon ul li {
+        width: 30%;
+  
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+  /* Small devices (landscape phones, 576px and up) */
+  @media (max-width: 576px) {
+    .presentation {
+      flex-direction: column;
+      align-items: center;
+      padding: 10%;
+  
+      .presentation__aboutme {
+        padding: 0%;
+        width: 100%;
+      }
+  
+      .presentation__avatar {
+        width: 30%;
+      }
+  
+      .presentation__list--icon {
+        width: 100%;
+      }
+  
+      .presentation__list--icon ul {
+        padding: 0%;
+  
+        li {
+          width: 15%;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,42 @@
+.flags {
+    display: flex;
+    display: -webkit-box;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0% 10%;
+  }
+  
+  .resume {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      padding: 0% 10%;
+    }
+    
+    app-presentation {
+      width: 30%;
+    }
+    
+    app-skill {
+      width: 70%;
+    }
+    
+    @media (max-width: 768px) {
+  
+      .flags {
+        padding: 0% 5%;
+      }
+  
+      .resume {
+        flex-direction: column;
+        padding: 0%;
+      }
+      app-presentation {
+        width: 100%;
+      }
+    
+      app-skill {
+        width: 100%;
+      }
+    }
+    
