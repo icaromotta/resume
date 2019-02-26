@@ -1,22 +1,28 @@
-import { Component, LOCALE_ID, Inject } from '@angular/core';
+import { Component, LOCALE_ID, Inject, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'resume';
 
-  languages = [
-    { code: 'fr', label: 'Français'}
-  ];
-  constructor(@Inject(LOCALE_ID) protected localeId: string) {}
+  constructor(private translate: TranslateService) {}
 
-  public chooseLang(lang) {
-    console.log(this.localeId);
-    this.localeId = lang;
-    console.log(this.localeId);
+  public ngOnInit(): void {
+    this.setDefaultTranslation();
+  }
+
+  private setDefaultTranslation(): void {
+    if (['en', 'es', 'fr'].indexOf(this.translate.getBrowserLang()) > -1) {
+      this.translate.setDefaultLang(this.translate.getBrowserLang());
+    }
+  }
+
+  public switchLanguage(lang: string): void {
+    this.translate.setDefaultLang(lang);
   }
 
 }

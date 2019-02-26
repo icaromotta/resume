@@ -1,11 +1,13 @@
-<!-- <div class="flags">
+<div class="flags">
   <app-internationalization></app-internationalization>
-</div> -->
-<ng-template ngFor let-lang [ngForOf]="languages">
-  <span *ngIf="lang.code !== localeId">
-    <a href="/{{lang.code}}/">{{lang.label}}</a> </span>
-  <span *ngIf="lang.code === localeId">{{lang.label}} </span>
-</ng-template>
+</div>
+
+<div>
+  <span (click)="switchLanguage('fr')">FRANÇOIS</span>
+  <span (click)="switchLanguage('es')">ESPANOL</span>
+  <span (click)="switchLanguage('en')">ENGLISH</span>
+</div>
+
 <div class="resume">
   <app-presentation></app-presentation>
   <app-skill></app-skill>
