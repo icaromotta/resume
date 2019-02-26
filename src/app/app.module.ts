@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SkillComponent } from './skill/skill.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InternationalizationComponent } from './internationalization/internatio
     InternationalizationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
