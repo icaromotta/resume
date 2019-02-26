@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, LOCALE_ID, Inject, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-internationalization',
@@ -11,9 +12,21 @@ export class InternationalizationComponent implements OnInit {
   public flagEua = '/assets/icons8-eua-48.png';
   public flagEspana = '/assets/icons8-espanha-48.png';
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
+    this.setDefaultTranslation();
   }
+
+  private setDefaultTranslation(): void {
+    if (['en', 'es', 'fr'].indexOf(this.translate.getBrowserLang()) > -1) {
+      this.translate.setDefaultLang(this.translate.getBrowserLang());
+    }
+  }
+
+  public switchLanguage(lang: string): void {
+    this.translate.setDefaultLang(lang);
+  }
+
 
 }
